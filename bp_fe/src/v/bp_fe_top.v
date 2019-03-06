@@ -247,7 +247,7 @@ assign fe_itlb_v   = bp_fe_cmd_v_i;
 assign itlb_fe_ready = bp_fe_queue_ready_i;
 
 // icache to icache
-assign poison = cache_miss && bp_fe_cmd.opcode == e_op_icache_fence;
+assign poison = cache_miss | (bp_fe_cmd.opcode == e_op_icache_fence) | (fe_pc_gen.pc_redirect_valid & fe_pc_gen_v);
 
    
 bp_fe_pc_gen 
