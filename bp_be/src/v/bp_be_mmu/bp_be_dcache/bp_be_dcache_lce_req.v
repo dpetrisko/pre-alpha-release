@@ -121,6 +121,8 @@ module bp_be_dcache_lce_req
 
     cache_miss_o = 1'b0;
 
+    cache_miss_o = 1'b0;
+
     missed = load_miss_i | store_miss_i;
 
     state_n = state_r;
