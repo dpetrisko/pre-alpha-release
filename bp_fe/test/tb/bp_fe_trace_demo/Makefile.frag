@@ -10,8 +10,8 @@ DUT_PARAMS= \
            -pvalue+num_cce_p=1                    \
            -pvalue+lce_sets_p=64                  \
            -pvalue+lce_assoc_p=8                  \
-           -pvalue+cce_block_size_in_bytes_p=64   
-           
+           -pvalue+cce_block_size_in_bytes_p=64
+
 TB_PARAMS= \
            -pvalue+core_els_p=1                   \
            -pvalue+eaddr_width_p=64               \
