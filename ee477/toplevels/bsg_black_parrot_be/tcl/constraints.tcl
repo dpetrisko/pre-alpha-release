@@ -6,7 +6,8 @@
 # for components such ass bsg_comm_link, bsg_tag and bsg_clk_gen.
 #
 
-create_clock -name core_clk -period 2.5 [get_ports clk_i]
+create_clock -name core_clk -period 2.05 [get_ports clk_i]
+#create_clock -name core_clk -period 2.50 [get_ports clk_i]
 set_input_delay  0.1 -clock core_clk [all_inputs]
 set_output_delay 0.1 -clock core_clk [all_outputs]
-
+set_clock_uncertainty 0.30 [get_clocks core_clk]
